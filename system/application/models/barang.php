@@ -215,7 +215,7 @@ class Barang extends Model
     */
     function get_barang_masuk($kode_bon)
     {
-        $query = 'select bm.*,b.nama, b.kelompok_barang, b.harga from barang_masuk bm left join barang b on bm.id_barang = b.id_barang  where id_mutasi_masuk = "'.$kode_bon.'" order by bm.id';
+        $query = 'select bm.*,b.nama, b.kelompok_barang, b.harga, b.hm from barang_masuk bm left join barang b on bm.id_barang = b.id_barang  where id_mutasi_masuk = "'.$kode_bon.'" order by bm.id';
         return $this->db->query($query);
     }
     /**

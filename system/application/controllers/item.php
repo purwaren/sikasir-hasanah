@@ -65,6 +65,7 @@ class Item extends Controller {
             {
                 $id_barang = $this->input->post('id_barang');
                 $nama = $this->input->post('nama');
+                $hm = $this->input->post('hm');
                 $harga = $this->input->post('harga');
                 $kel_barang = $this->input->post('kel_barang');
                 $qty = $this->input->post('qty');
@@ -80,6 +81,7 @@ class Item extends Controller {
                         $data = array(
                             'id_barang'=>$id_barang[$i],
                             'nama'=>$nama[$i],
+                            'hm'=>$hm[$i],
                             'harga'=>$harga[$i],
                             'kelompok_barang'=>$kel_barang[$i],
                             'diskon'=> $disc[$i],
@@ -371,11 +373,12 @@ class Item extends Controller {
                 {
                     $jumlah = $row->qty * $row->harga;
                     $row_data .= '<tr><td>'.++$i.'</td><td>'.$row->id_barang.'</td><td>'.$row->nama.'</td>
+                                <td>'.number_format($row->hm,0,',','.').'</td>
                                 <td>'.number_format($row->harga,0,',','.').'</td><td>'.$row->qty.'</td><td>'.number_format($jumlah,0,',','.').'</td></tr>';
                     $total += $row->qty;
                     $total_jumlah += $jumlah;
                 }
-                $row_data .= '<tr><td colspan="4" style="text-align:right">T O T A L</td><td>'.$total.'</td><td>'.number_format($total_jumlah,0,',','.').'</td></tr>';
+                $row_data .= '<tr><td colspan="5" style="text-align:right">T O T A L</td><td>'.$total.'</td><td>'.number_format($total_jumlah,0,',','.').'</td></tr>';
                 $this->data['row_data'] = $row_data;
                 $this->data['kode_bon'] = $kode_bon;
                 $this->data['tanggal_bon'] = $row->tanggal;

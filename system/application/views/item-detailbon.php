@@ -27,7 +27,7 @@
         <table class="table-data" cellspacing="0" cellpadding="0" style="width:950px">
             <tr>
                 <td class="head"> No </td><td class="head"> Kode Barang </td><td class="head">Nama</td>
-                <td class="head"> Harga (Rp) </td><td class="head"> Qty </td> <td class="head"> Jumlah (Rp) </td>             
+                <td class="head"> HM (Rp) </td><td class="head"> Harga (Rp) </td><td class="head"> Qty </td> <td class="head"> Jumlah (Rp) </td>
                 
             </tr>
             <?php _e($row_data) ?>            

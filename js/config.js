@@ -14,7 +14,7 @@ var kassaServer = new Array();
 /**
 * Base url
 */
-var baseUrl = '/sikasir/';
+var baseUrl = '/sikasir-hasanah/';
 /**
 * Row type
 * 0 -> not accumulated

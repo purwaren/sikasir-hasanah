@@ -30,7 +30,7 @@ $config['port'] =  20000;
  */
 $config['display'] = 2345;
 $config['use_display'] = false;
-$config['base_url'] = '/mode/sikasir/';
+$config['base_url'] = '/sikasir-hasanah/';
 /**
  * Application version
  */
