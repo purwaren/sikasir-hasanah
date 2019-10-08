@@ -37,6 +37,7 @@
                 <td class="head">Nama Barang</td>
                 <td class="head">Kelompok Barang</td>
                 <td class="head">Disc %</td>
+                <td class="head">HM (Rp)</td>
                 <td class="head">Harga Jual (Rp)</td>
                 <td class="head">Quantity</td>
                 <td class="head">Jumlah</td>

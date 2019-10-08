@@ -1091,13 +1091,14 @@ class Item extends Controller {
 	                                                    <td>'.$row['item_name'].'</td>
 	                                                    <td>'.$row['cat_code'].'</td>
 	                                                    <td>'.$row['item_disc'].'</td>
+	                                                    <td style="text-align:right;padding-right:10px;"><input type="hidden" id="item_hm_'.$i.'" value="'.$row['item_hm'].'">'.number_format($row['item_hm'],0,',','.').',-</td>
 	                                                    <td style="text-align:right;padding-right:10px;"><input type="hidden" id="item_hj_'.$i.'" value="'.$row['item_hj'].'">'.number_format($row['item_hj'],0,',','.').',-</td>
 	                                                    <td>'.$row['quantity'].'</td>
 	                                                    <td>'.number_format($jumlah,0,',','.').',-</td>
 	                                                    <td><span class="button"><input type="button" class="button" value="O K" onclick="saveImport('.$i.')"/></span></td>
 	                                                </tr>';
 	                }
-	                $this->data['row_data'] .= '<tr><td colspan="6" style="text-align:right">T O T A L</td><td>'.$total_qty.'</td><td>'.number_format($total,0,',','.').',-</td><td></td></tr>';
+	                $this->data['row_data'] .= '<tr><td colspan="7" style="text-align:right">T O T A L</td><td>'.$total_qty.'</td><td>'.number_format($total,0,',','.').',-</td><td></td></tr>';
             
                 }
                 else
@@ -1126,8 +1127,9 @@ class Item extends Controller {
                 $barang = array(
                         'id_barang'=>$this->input->post('item_code'),                        
                         'nama'=>$this->input->post('item_name'),                        
-                        'harga'=>$this->input->post('item_hj'),                        
-                        'kelompok_barang'=>$this->input->post('cat_code'),                        
+                        'hm'=>$this->input->post('item_hm'),
+                        'harga'=>$this->input->post('item_hj'),
+                        'kelompok_barang'=>$this->input->post('cat_code'),
                         'diskon'=>$this->input->post('item_disc'),                        
                         'total_barang'=>$this->input->post('quantity'),                        
                         'stok_barang'=>$this->input->post('quantity'),                        
@@ -1240,6 +1242,7 @@ class Item extends Controller {
                 {
                     $this->data['row_data'] .= '<tr>
                                                     <td>'.++$i.'</td><td>'.date_to_string($row->tanggal).'</td><td>'.$row->id_barang.'</td><td>'.$row->nama.'</td>
+                                                    <td>'.number_format($row->hm,0,',','.').'</td>
                                                     <td>'.number_format($row->harga,0,',','.').'</td><td>'.$row->diskon.'</td><td>'.$row->total_barang.'</td>
                                                     <td>'.$row->qty.'</td><td>'.$row->mutasi_keluar.'</td><td>'.$row->stok_barang.'</td>
                                                 </tr>';                    

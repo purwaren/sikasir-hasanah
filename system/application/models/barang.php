@@ -172,7 +172,7 @@ class Barang extends Model
     */
     function update_barang_gudang($data)
     {
-        $query = 'update barang set nama="'.$data['nama'].'",harga="'.$data['harga'].'",kelompok_barang="'.$data['kelompok_barang'].'",diskon="'.$data['diskon'].'",
+        $query = 'update barang set nama="'.$data['nama'].'",hm="'.$data['hm'].'",harga="'.$data['harga'].'",kelompok_barang="'.$data['kelompok_barang'].'",diskon="'.$data['diskon'].'",
                   stok_barang = stok_barang + '.$data['stok_barang'].',                  
                   total_barang = total_barang + '.$data['total_barang'].',
                   mutasi_masuk = mutasi_masuk + '.$data['mutasi_masuk'].'

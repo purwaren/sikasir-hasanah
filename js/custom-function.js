@@ -753,8 +753,9 @@ function saveImport(line) {
     var item_name = $('.table-data tr:nth-child('+idx_save+') td:nth-child(3)').html();    
     var cat_code = $('.table-data tr:nth-child('+idx_save+') td:nth-child(4)').html();    
     var item_disc = $('.table-data tr:nth-child('+idx_save+') td:nth-child(5)').html();    
-    var quantity = $('.table-data tr:nth-child('+idx_save+') td:nth-child(7)').html();    
+    var quantity = $('.table-data tr:nth-child('+idx_save+') td:nth-child(8)').html();
     var item_hj = $('#item_hj_'+line).val();
+    var item_hm = $('#item_hm_'+line).val();
     var kode_bon = $('#kode_bon').val();
     var tgl_bon = $('#date_bon').val();
     //hide button
@@ -763,7 +764,7 @@ function saveImport(line) {
     if(kode_bon != "" && tgl_bon != "") {
         $.post(
             baseUrl+"item/import",
-            {'item_code': item_code, 'item_name':item_name, 'cat_code':cat_code, 'item_disc':item_disc, 'quantity':quantity, 'item_hj':item_hj,'kode_bon':kode_bon, 'tgl_bon':tgl_bon},
+            {'item_code': item_code, 'item_name':item_name, 'cat_code':cat_code, 'item_disc':item_disc, 'quantity':quantity, 'item_hm':item_hm, 'item_hj':item_hj,'kode_bon':kode_bon, 'tgl_bon':tgl_bon},
             function(data) {            
                 if(data == '1') { //sukses
                     $('.table-data tr:nth-child('+idx_save+') td:last-child span').fadeOut('slow',function(){
