@@ -14,7 +14,7 @@ var kassaServer = new Array();
 /**
 * Base url
 */
-var baseUrl = '/sikasir/';
+var baseUrl = '/biestro/';
 /**
 * Row type
 * 0 -> not accumulated
@@ -32,7 +32,7 @@ var allowPramu = 0;
 */
 var defMsg = new Array();
 defMsg[0] = 'Welcome To';
-defMsg[1] = 'Mode Fashion Group';
+defMsg[1] = 'BIESTRO MART';
 
 /**
  * Config for open price
@@ -45,3 +45,9 @@ var openPrice = false;
  * Discount untuk refund event custom
  */
 var discountRefund=20;
+
+/**
+ * Setting item length
+ * Default 10 digit
+ */
+var itemLength=32;
